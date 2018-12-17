@@ -1,0 +1,26 @@
+{
+  "name": "pyramid-card-game",
+  "version": "1.0.0",
+  "description": "Web-based pyramid card game",
+  "main": "server.js",
+  "dependencies": {
+    "hamburgers": "^1.1.3",
+    "jquery-bar-rating": "^1.2.2",
+    "jquery": "^3.3.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node server.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/silas229/pyramid-card-game"
+  },
+  "keywords": [
+    "card",
+    "game"
+  ],
+  "author": "Silas_229",
+  "license": "GPL-3.0"
+}

@@ -1,0 +1,94 @@
+@import 'variables';
+.br-theme-cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+    .br-widget {
+    height: 10em;
+    white-space: nowrap;
+    vertical-align: middle;
+    a {
+      width: 6em;
+      padding: 5px 0;
+      height: 8em;
+      float: left;
+      background-color:  $cards;
+      margin: 1px;
+      text-align: center;
+      border-radius: .5em;
+      outline: 0;
+      &.br-active:not(.br-selected) {
+        -webkit-animation: flip-vertical-fwd 0.4s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+        animation: flip-vertical-fwd 0.4s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+      }
+      &.br-active:not(.br-selected) {
+        &:nth-of-type(1) {
+          animation-delay: .05s;
+        }
+        &:nth-of-type(2) {
+          animation-delay: .1s;
+        }
+        &:nth-of-type(3) {
+          animation-delay: .15s;
+        }
+        &:nth-of-type(4) {
+          animation-delay: .2s;
+        }
+        &:nth-of-type(5) {
+          animation-delay: .25s;
+        }
+        &:nth-of-type(6) {
+          animation-delay: .3s;
+        }
+        &:nth-of-type(7) {
+          animation-delay: .35s;
+        }
+      }
+      &.br-selected {
+        margin: 0;
+      }
+      &.br-current-rating {
+        font-size: 20px;
+        line-height: 2;
+        float: left;
+        padding: 0 20px 0 20px;
+        color: #EDB867;
+        font-weight: 400;
+      }
+    }
+    .br-readonly {
+      a {
+      cursor: default;
+      }
+    }
+    // a.br-active,
+    // a.br-selected {
+    //   background-color: $c-hover;
+    // }
+    .br-current-rating {
+      color: $c-hover;
+    }
+  }
+  @media print {
+    .br-theme-cards .br-widget {
+      a {
+      border: 1px solid #b3b3b3;
+      background: white;
+      height: 38px;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      }
+      a.br-active {
+        border: 1px solid black;
+        background: white;
+      }
+      a.br-selected {
+        display: none;
+      }
+      .br-current-rating {
+        color: black;
+      }
+    }
+  }
+}
